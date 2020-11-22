@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Home Filled" data-name="Home" transform="translate(-544 -258)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="24" height="24" transform="translate(544 258)" fill="#fff"/>
+    <path id="Subtraction_4" data-name="Subtraction 4" d="M-2384,16h-1.469a1.991,1.991,0,0,1-1.911-1.409l-2.209-7.147a2.006,2.006,0,0,1,.7-2.179l5.677-4.337A1.985,1.985,0,0,1-2382,.517a1.979,1.979,0,0,1,1.213.411l5.677,4.337a2.006,2.006,0,0,1,.7,2.179l-2.208,7.147A1.991,1.991,0,0,1-2378.531,16H-2380V12a1,1,0,0,0-1-1h-2a1,1,0,0,0-1,1v4Z" transform="translate(2938 262)" fill="#333"/>
+  </g>
+</svg>

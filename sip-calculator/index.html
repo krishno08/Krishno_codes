@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIP Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>SIP Calculator</h1>
+      <p class="sub">Estimate the future value of your monthly mutual fund investments.</p>
+    </header>
+
+    <section class="inputs">
+      <div class="field">
+        <div class="row"><label for="amount">Monthly investment</label>
+          <span class="box">₹ <input id="amount-n" type="number" min="500" max="200000" step="500" value="10000" /></span></div>
+        <input id="amount" type="range" min="500" max="200000" step="500" value="10000" />
+      </div>
+      <div class="field">
+        <div class="row"><label for="rate">Expected return rate (p.a.)</label>
+          <span class="box"><input id="rate-n" type="number" min="1" max="30" step="0.1" value="12" /> %</span></div>
+        <input id="rate" type="range" min="1" max="30" step="0.1" value="12" />
+      </div>
+      <div class="field">
+        <div class="row"><label for="years">Time period</label>
+          <span class="box"><input id="years-n" type="number" min="1" max="40" step="1" value="10" /> yrs</span></div>
+        <input id="years" type="range" min="1" max="40" step="1" value="10" />
+      </div>
+      <div class="field">
+        <div class="row"><label for="stepup">Annual step-up</label>
+          <span class="box"><input id="stepup-n" type="number" min="0" max="50" step="1" value="0" /> %</span></div>
+        <input id="stepup" type="range" min="0" max="50" step="1" value="0" />
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="donut-wrap">
+        <svg viewBox="0 0 42 42" class="donut" aria-hidden="true">
+          <circle cx="21" cy="21" r="15.915" class="ring invested" />
+          <circle cx="21" cy="21" r="15.915" class="ring returns" id="returns-arc" />
+        </svg>
+        <ul class="legend">
+          <li><i class="sw invested"></i>Invested</li>
+          <li><i class="sw returns"></i>Est. returns</li>
+        </ul>
+      </div>
+      <dl class="stats">
+        <div><dt>Invested amount</dt><dd id="out-invested">–</dd></div>
+        <div><dt>Est. returns</dt><dd id="out-returns">–</dd></div>
+        <div class="total"><dt>Total value</dt><dd id="out-total">–</dd></div>
+      </dl>
+    </section>
+
+    <details class="breakdown">
+      <summary>Year-by-year breakdown</summary>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Year</th><th>Monthly SIP</th><th>Invested</th><th>Returns</th><th>Value</th></tr></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </details>
+
+    <p class="note">Returns are illustrative and assume a constant rate with monthly compounding and
+      investments at the start of each month. Mutual fund investments are subject to market risks.</p>
+  </main>
+
+  <script src="sip.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
